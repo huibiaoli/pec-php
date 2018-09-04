@@ -13,3 +13,4 @@ RUN pecl install mongo-1.6.14 \
     && docker-php-ext-enable mongo memcached \
     && docker-php-ext-install pdo pdo_mysql mcrypt \
     && docker-php-ext-install zip \
+
