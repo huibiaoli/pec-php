@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install gd
 RUN pecl install mongo-1.6.14 \
     && pecl install memcached-2.2.0 \
+    && pecl install -f mongodb-1.5.0 \
+    && docker-php-ext-enable mongodb \
     && docker-php-ext-enable mongo memcached \
     && docker-php-ext-install pdo pdo_mysql mcrypt \
     && docker-php-ext-install zip \
